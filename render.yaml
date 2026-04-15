@@ -3,7 +3,7 @@ services:
     name: daystar
     plan: free
     runtime: python
-    buildCommand: "./build.sh"
+    buildCommand: "bash build.sh"
     startCommand: "gunicorn daystar.wsgi:application"
     envVars:
       - key: DATABASE_URL
